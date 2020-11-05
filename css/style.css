@@ -1051,6 +1051,10 @@ p.intro__footer-item:hover {
 
     /* Sidebar */
 
+    .sidebar-menu__list {
+        width: 250px;
+    }
+
     .sidebar-menu__link {
         font-size: 15px;
     }
