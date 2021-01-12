@@ -1,0 +1,59 @@
+@import "vars";
+@import "mixins";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+    &.no-scroll,
+    &.header__nav-active {
+        overflow: hidden;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@import "blocks/intro";
+@import "blocks/header";
+@import "blocks/burger";
+@import "blocks/btn";
+@import "blocks/sidebar";
+@import "blocks/section";
+@import "blocks/cards";
+@import "blocks/statistics";
+@import "blocks/advantages";
+@import "blocks/action";
+@import "blocks/map";
+@import "blocks/reviews";
+@import "blocks/sale";
+@import "blocks/footer";
+
+@import "blocks/media";

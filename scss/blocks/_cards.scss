@@ -1,0 +1,128 @@
+.cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.cards__item {
+    position: relative;
+    margin: 20px auto;
+    padding: 15px;
+    width: 31%;
+    background: $main-color-light;
+
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    -webkit-transition-property: -webkit-box-shadow;
+
+    transition-property: -webkit-box-shadow;
+
+    -o-transition-property: box-shadow;
+
+    transition-property: box-shadow;
+
+    transition-property: box-shadow, -webkit-box-shadow;
+    -webkit-transition-duration: .33s;
+         -o-transition-duration: .33s;
+            transition-duration: .33s;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+ }
+
+ .cards__item:hover {
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ } 
+ 
+.cards__header {
+    margin-bottom: 15px;
+    position: relative;
+ }
+
+ .cards__header:focus {
+     outline: none;
+ }
+
+.cards__img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+ }
+
+ .cards__price {
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $main-color;
+ }
+
+.cards__content {
+    padding: 0 10px 10px;
+    text-align: center;
+ }
+
+.cards__title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+ }
+
+.cards__text {
+    font-size: 15px;
+    color: #333;
+ }
+
+  /* SLICK-SLIDER */
+
+.cards__item-slider {
+    position: relative;
+}
+
+.slick-arrow {
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    line-height: 0;
+    max-width: 30px;
+    height: 30px;
+    border: 0;
+}
+
+.slick-arrow:focus {
+    outline: none;
+}
+
+.slick-prev {
+    left: 0;
+    background: url("../img/arrows/chevron-left-solid.svg") 0 0 / 100% no-repeat;
+    cursor: pointer;
+}
+
+.slick-next {
+    right: 0;
+    background: url("../img/arrows/chevron-right-solid.svg") 0 0 / 100% no-repeat;
+    cursor: pointer;
+}
+
+.slick-initialized .slick-slide{
+    outline: none;
+}

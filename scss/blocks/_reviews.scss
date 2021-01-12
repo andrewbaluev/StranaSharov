@@ -1,0 +1,60 @@
+.reviews {
+    position: relative;
+}
+
+.reviews .slick-slider  {
+    padding: 0 110px;
+}
+
+.reviews .slick-prev {
+    background: url("../img/arrows/chevron-left-solid-black.svg") 0 0 / 100% no-repeat;
+}
+
+.reviews .slick-next {
+    background: url("../img/arrows/chevron-right-solid-black.svg") 0 0 / 100% no-repeat;
+}
+
+.reviews__item {
+    padding-left: 250px;
+    position: relative;
+}
+
+.reviews__photo {
+    display: block;
+    position: absolute;
+    width: 210px;
+    height: 210px;
+
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.reviews__inner {
+    position: relative;
+    min-height: 210px;
+}
+
+.reviews__text {
+    margin-bottom: 15px;
+
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    color: #333;
+}
+
+.smile {
+    font-style: normal;
+}

@@ -1,0 +1,33 @@
+.statistics {
+    background-color: $main-color;;
+}
+
+.stat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.stat__item {
+    width: 25%;
+    border: 1px solid rgba(255, 255, 255, .5);
+    text-align: center;
+    color: #fff;
+
+    padding: 70px 25px;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
