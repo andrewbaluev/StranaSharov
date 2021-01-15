@@ -4,6 +4,10 @@
 
 .reviews .slick-slider  {
     padding: 0 110px;
+
+    @include breakpoint($tablet-sm-bp) {
+        padding: 0px 40px;
+    }
 }
 
 .reviews .slick-prev {
@@ -17,6 +21,10 @@
 .reviews__item {
     padding-left: 250px;
     position: relative;
+
+    @include breakpoint($tablet-sm-bp) {
+        padding-left: 0;
+    }
 }
 
 .reviews__photo {
@@ -33,6 +41,11 @@
     z-index: 1;
     -o-object-fit: cover;
        object-fit: cover;
+
+    @include breakpoint($tablet-sm-bp) {
+        margin: 0 auto;
+        position: static;
+    }
 }
 
 .reviews__inner {
@@ -53,8 +66,19 @@
     font-style: italic;
     font-weight: 300;
     color: #333;
+
+    @include breakpoint($tablet-sm-bp) {
+        font-size: 16px;
+    }
+}
+
+.reviews__author {
+    @include breakpoint($tablet-sm-bp) {
+        font-size: 20px;
+    }
 }
 
 .smile {
     font-style: normal;
 }
+

@@ -15,6 +15,10 @@
         flex-wrap: wrap;
     margin: 0 -15px;
     padding-bottom: 65px;
+
+    @include breakpoint($tablet-bp) {
+        padding-bottom: 20px;
+    }
 }
 
 .footer__col {
@@ -23,11 +27,22 @@
 
 .footer__col-info {
     width: 60%;
+
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .footer__col-instagram {
     text-align: center;
     width: 40%;
+
+    @include breakpoint($tablet-bp) {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .footer__logo {
@@ -70,19 +85,21 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    -webkit-transition: color .2s linear;
-    -o-transition: color .2s linear;
-    transition: color .2s linear; 
+    transition: color .2s ease; 
 
     & svg {
         width: 20px;
         height: 20px;
         display: inline-block;
         vertical-align: text-top;
+        transition: fill .2s ease; 
     }
 }
 
 .footer__social-link:hover {
     color: $main-color;
 
+    & svg {
+        fill: $main-color;
+    }
 }

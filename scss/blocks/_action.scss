@@ -12,6 +12,10 @@
 .action__item {
     width: 32%;
     margin-bottom: 30px;
+
+    @include breakpoint($tablet-sm-bp) {
+        width: 48%;
+    }
 }
 
 .action__photo {

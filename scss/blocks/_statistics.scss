@@ -1,5 +1,5 @@
 .statistics {
-    background-color: $main-color;;
+    background-color: $main-color;
 }
 
 .stat {
@@ -17,6 +17,14 @@
     color: #fff;
 
     padding: 70px 25px;
+
+    @include breakpoint($tablet-bp) {
+        padding: 70px 5px;
+    }
+
+    @include breakpoint($tablet-sm-bp) {
+        width: 50%;
+    }
 }
 
 .stat__count {

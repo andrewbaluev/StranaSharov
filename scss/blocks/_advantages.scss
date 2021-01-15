@@ -12,6 +12,15 @@
     padding: 0 45px 0 175px;
     position: relative;
     margin-bottom: 60px;
+
+    @include breakpoint($tablet-sm-bp) {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 0;
+        padding: 20px;
+    }
 }
 
 .advantages__photo {
@@ -24,6 +33,11 @@
     top: 0;
     left: 40px;
     z-index: 1;
+
+    @include breakpoint($tablet-sm-bp) {
+        position: static;
+        margin-right: 20px;
+    }
 }
 
 .clients__prof {

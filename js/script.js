@@ -41,21 +41,24 @@ $(document).ready(function(){
             index = 0;
         }
         slides[index].classList.add(activeClass);
-    }, 3000);
+    }, 10000);
 
     // Sidebar 
 
-    const menuOpen = document.querySelector('.header__nav-open');
-    const menuClose = document.querySelector('.header__nav-close');
-    const sidebar = document.querySelector('.header__nav');
-    const menuLinks = document.querySelectorAll('.header__link');
+    const   menuOpen = document.querySelector('.header__nav-open'),
+            menuClose = document.querySelector('.header__nav-close'),
+            sidebar = document.querySelector('.header__nav'),
+            menuLinks = document.querySelectorAll('.header__link'),
+            body = document.querySelector('body');
 
     menuOpen.addEventListener('click', () => {
         sidebar.classList.add('header__nav-active');
+        body.style.overflow = 'hidden';
     });
 
     menuClose.addEventListener('click', () => {
         sidebar.classList.remove('header__nav-active');
+        body.style.overflow = '';
     });
 
     if (window.innerWidth <= 767) {
