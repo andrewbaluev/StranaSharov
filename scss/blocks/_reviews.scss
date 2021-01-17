@@ -1,12 +1,22 @@
 .reviews {
     position: relative;
-}
 
-.reviews .slick-slider  {
-    padding: 0 110px;
+    .slick-slider  {
+        padding: 0 110px;
+    
+        @include breakpoint($tablet-sm-bp) {
+            padding: 0px 40px;
+        }
+    
+        @include breakpoint($mobile-bp) {
+            padding: 0;
+        }
 
-    @include breakpoint($tablet-sm-bp) {
-        padding: 0px 40px;
+        .slick-arrow {
+            @include breakpoint($mobile-bp) {
+                top: 18%;
+            }            
+        }
     }
 }
 

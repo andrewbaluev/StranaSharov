@@ -1,76 +1,72 @@
 .intro {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    position: relative;
+    background-color: #fff;
 
-    width: 100%;
-    height: 100vh;
-    background-color: $main-color;
-    background-size: cover;
-
-    @include breakpoint($tablet-sm-bp) {
-        background-color: transparent;
+    &__slider-img {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        object-fit: cover;
     }
-}
 
-.intro__inner {
-    width: 95%;
-
-    @include breakpoint($tablet-sm-bp) {
+    &__inner {
         position: absolute;
-        top: 41%;
-    }
-}
-
-.intro__title {
-    margin-bottom: 30px;
-
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 110px;
-    font-weight: 700;
-    line-height: 1;
-
-    @include breakpoint($laptop-bp) {
-        font-size: 80px;
+        top: 45%;
+        left: 10%;
     }
 
-    @include breakpoint($tablet-bp) {
-        font-size: 70px;
+    &__title {
+        margin-bottom: 30px;
+    
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 110px;
+        font-weight: 700;
+        line-height: 1;
+
+        @include breakpoint($laptop-bp) {
+            font-size: 80px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 20px;
+            font-size: 70px;
+        }
+
+        @include breakpoint($tablet-sm-bp) {
+            font-size: 50px;
+            text-shadow: 0 0 12px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 10px;
+        }
     }
 
-    @include breakpoint($tablet-sm-bp) {
-        font-size: 60px;
-        text-shadow: 0 0 12px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.3);
-    }
+    &__suptitle { 
+        margin-bottom: 20px;
+        font-family: 'Caveat', cursive;
+        font-size: 88px;
+        color: #fff;
+        font-weight: 700;
+        
+        @include breakpoint($laptop-bp) {
+            font-size: 66px;
+        }
+    
+        @include breakpoint($tablet-bp) {
+            margin-bottom: 10px;
+            font-size: 55px;  
+        }
+    
+        @include breakpoint($tablet-sm-bp) {
+            font-size: 34px;
+            text-shadow: 0 0 12px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.3);
+        }
 
-}
- 
-.intro__suptitle { 
-    margin-bottom: 20px;
-    font-family: 'Caveat', cursive;
-    font-size: 88px;
-    color: #fff;
-    font-weight: 700;
-
-    @include breakpoint($laptop-bp) {
-        font-size: 66px;
-    }
-
-    @include breakpoint($tablet-bp) {
-        font-size: 55px;  
-    }
-
-    @include breakpoint($tablet-sm-bp) {
-        font-size: 34px;
-        text-shadow: 0 0 12px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.3);
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -90,8 +86,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 7%;
     border-top: 2px solid $second-color;
+    background-color: $main-color;
 
     @include breakpoint($tablet-sm-bp) {
         display: none;
@@ -148,68 +145,5 @@
 
     & svg {
         fill: $second-color; 
-    }
-}
-
-/* SLIDER */
-
-.intro__slider {
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 0;    
-    width: 100%;
-    height: 90%;
-
-    @include breakpoint($tablet-sm-bp) {
-        height: 100%;
-    }
-}
-
-
-.intro__slider-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: opacity .3s linear;
-    -o-transition: opacity .3s linear;
-    transition: opacity .3s linear;
-}
-
-.intro__slider-item-visible {
-    opacity: 1; 
-}
-
-.intro__slider-item-1 {
-    background: url("../img/bg/bg-1.jpg") center / cover;
-    @include breakpoint($tablet-sm-bp) {
-        background-position-x: 80%;
-    }
-}
-
-.intro__slider-item-2 {
-    background: url("../img/bg/bg-2.jpg") center / cover;
-    @include breakpoint($tablet-sm-bp) {
-        background-position-x: 80%;
-    }
-}
-
-.intro__slider-item-3 {
-    background: url("../img/bg/bg-3.jpg") center / cover;
-    @include breakpoint($tablet-sm-bp) {
-        background-position-x: 80%;
     }
 }

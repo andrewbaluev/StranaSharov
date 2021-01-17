@@ -1,5 +1,5 @@
 .header {
-    padding-top: 20px;
+    // padding-top: 20px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -31,6 +31,11 @@
         @include breakpoint($tablet-sm-bp) {
             text-shadow: 0 0 12px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.3);
         }
+
+        @include breakpoint($mobile-bp) {
+            font-size: 25px;
+        }
+
     }
 
     &__nav {
@@ -78,6 +83,10 @@
     
             @include breakpoint($tablet-sm-bp) {
                 display: block;
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                border: none;
             }
         }
 
@@ -98,6 +107,10 @@
 
             @include breakpoint($tablet-sm-bp) {
                 display: block;
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                border: none;
             }
         }
     }

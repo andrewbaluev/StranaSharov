@@ -5,6 +5,10 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 70px;
+
+    @include breakpoint($mobile-bp) {
+        margin-top: 0;
+    }
 }
 
 .advantages__item {
@@ -20,6 +24,11 @@
         display: flex;
         margin-bottom: 0;
         padding: 20px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        margin-top: 30px;
+        padding: 0;
     }
 }
 
@@ -38,6 +47,10 @@
         position: static;
         margin-right: 20px;
     }
+
+    @include breakpoint($mobile-bp) {
+        margin-right: 10px;
+    }
 }
 
 .clients__prof {
@@ -49,7 +62,10 @@
 
 .advantages__text {
     font-size: 16px;
-    /* color: #999; */
+
+    @include breakpoint($mobile-bp) {
+        overflow-wrap: anywhere;
+    }
  }
 
  .advantages__text:before {
@@ -60,4 +76,8 @@
      margin: 15px 0;
 
      background-color: $main-color;
+
+     @include breakpoint($mobile-bp) {
+        margin: 8px 0;
+    }
  }
